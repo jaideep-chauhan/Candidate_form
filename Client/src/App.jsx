@@ -93,21 +93,24 @@ function App() {
 
     console.log("sdsdsdsdsdsdsd", files);
     try {
-      await axios.post("https://candidate-form-1-4gi7.onrender.com/api/submit-form", data);
+      await axios.post(
+        "https://candidate-form-1-4gi7.onrender.com/api/submit-form",
+        data
+      );
       toast.success("Form submitted successfully!");
       // Reset form fields
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      street1: "",
-      street2: "",
-      permStreet1: "",
-      permStreet2: "",
-    });
-    setStartDate(new Date());
-    setFiles([{ name: "", type: "", file: null }]);
-    setIsSameAddress(false); // Reset checkbox
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        street1: "",
+        street2: "",
+        permStreet1: "",
+        permStreet2: "",
+      });
+      setStartDate(new Date());
+      setFiles([{ name: "", type: "", file: null }]);
+      setIsSameAddress(false); // Reset checkbox
     } catch (error) {
       console.error("There was an error submitting the form!", error);
       toast.error("There was an error submitting the form!");
@@ -164,6 +167,7 @@ function App() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <DatePicker
+              style={{ width: "100%" }}
               selected={startDate}
               onChange={(date) => setStartDate(date)}
               customInput={
@@ -172,7 +176,7 @@ function App() {
                   variant="outlined"
                   fullWidth
                   InputProps={{
-                    style: { width: "550px" },
+                    style: { width: "100%" },
                   }}
                 />
               }
