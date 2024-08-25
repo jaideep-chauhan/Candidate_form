@@ -93,7 +93,7 @@ function App() {
 
     console.log("sdsdsdsdsdsdsd", files);
     try {
-      await axios.post("http://localhost:5000/api/submit-form", data);
+      await axios.post("https://candidate-form-1-4gi7.onrender.com/api/submit-form", data);
       toast.success("Form submitted successfully!");
       // Reset form fields
     setFormData({
