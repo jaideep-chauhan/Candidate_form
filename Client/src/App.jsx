@@ -172,7 +172,7 @@ function App() {
                   variant="outlined"
                   fullWidth
                   InputProps={{
-                    style: { width: "620px" },
+                    style: { width: "590px" },
                   }}
                 />
               }
